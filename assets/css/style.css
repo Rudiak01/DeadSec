@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Hacked;
+    src: url(https://hackedfont.com/HACKED.ttf);
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: Hacked;
+}
+
+header {
+  background-color: #000;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  position: fixed;
+  max-block-size: 80px;
+}
+.navbar {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin: auto;
+  padding: 30px;
+}
+
+main {
+  padding-top: 70px; /* Ajout de la hauteur de la barre de navigation */
+}
+nav img {
+  height: 110px;
+  margin-top: 1vh;
+  transition: transform 0.3s ease-in-out;
+}
+nav img:hover {
+  transform: scale(0.96);
+}
+nav a {
+  transition: transform 0.3s ease-in-out;
+}
+nav a:hover {
+  transform: scale(0.96);
+}
