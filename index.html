@@ -6,16 +6,247 @@
     <title>DEADSEC</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="icon" type="image/png" href="assets/img/favico.png" />
+    <link rel="stylesheet" href="assets/fonts/font.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
   </head>
   <body>
     <header>
       <nav class="navbar">
         <a href="boutique.html">Boutique</a>
         <div id="logo">
-          <a href="index.html"><img src="assets/img/1.png" alt="Logo" /></a>
+          <a href="index.html"
+            ><img src="assets/img/skullgpng.png" alt="Logo"
+          /></a>
         </div>
         <a href="contact.html">Contact</a>
       </nav>
     </header>
+    <main>
+      <section id="accueil">
+        <h1>Bienvenue dans notre Univers</h1>
+        <p>
+          Découvrez notre collection unique et plongez dans un monde
+          d'imagination et de style.
+        </p>
+        <a href="boutique.html">
+          <button class="cta-button">Explorez la Boutique</button>
+        </a>
+      </section>
+      <section id="equipe">
+        <h2>Notre Équipe</h2>
+        <div class="team-container">
+          <div class="team-member" data-member="member1">
+            <div class="team-member-image">
+              <img src="assets/img/staff/leplusbo.png" alt="Membre 1" />
+            </div>
+            <h3>Fabien</h3>
+            <p>Capitaine</p>
+          </div>
+          <div class="team-member" data-member="member2">
+            <div class="team-member-image">
+              <img src="assets/img/staff/louann.png" alt="Membre 2" />
+            </div>
+            <h3>Lou-Ann</h3>
+            <p>Pro JavaScript</p>
+          </div>
+          <div class="team-member" data-member="member3">
+            <div class="team-member-image">
+              <img src="assets/img/staff/tealo.png" alt="Membre 3" />
+            </div>
+            <h3>Téano</h3>
+            <p>Le mec sous kali</p>
+          </div>
+          <div class="team-member" data-member="member4">
+            <div class="team-member-image">
+              <img src="assets/img/staff/romain.png" alt="Membre 4" />
+            </div>
+            <h3>Romain</h3>
+            <p>Le 4ème membre</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modales pour chaque membre -->
+      <div id="member1Modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="assets/img/staff/leplusbo.png" alt="Fabien" />
+          <div class="modal-text">
+            <h2>Fabien</h2>
+            <p>Informations détaillées sur Fabien...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="member2Modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="assets/img/staff/louann.png" alt="Lou-Ann" />
+          <div class="modal-text">
+            <h2>Lou-Ann</h2>
+            <p>Informations détaillées sur Lou-Ann...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="member3Modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="assets/img/staff/tealo.png" alt="Téano" />
+          <div class="modal-text">
+            <h2>Téano</h2>
+            <p>Informations détaillées sur Téano...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="member4Modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="assets/img/staff/romain.png" alt="Romain Mottard" />
+          <div class="modal-text">
+            <h2>Romain Mottard</h2>
+            <p>Informations détaillées sur Romain...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>À propos</h3>
+          <p>
+            Découvrez notre univers unique de style et d'imagination. Nous
+            sommes passionnés par la création de designs innovants et
+            captivants.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Liens rapides</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="pc.html">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              Email : <a href="mailto:info@deadsec.com">info@deadsec.com</a>
+            </li>
+            <li>Téléphone : +33 6 62 12 53 64</li>
+            <li>Femme uniquement</li>
+            <li>Adresse: 16 Rue de la Justice, 51100 Reims</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <div class="social-icons">
+            <a
+              href="https://instagram.com/fablbn_"
+              aria-label="Instagram Le plus bo"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://instagram.com/teanokayak"
+              aria-label="Instagram"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://instagram.com/rom1_0_cub3"
+              aria-label="Instagram"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://instagram.com/louann.grdn"
+              aria-label="Instagram"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 DeadSec. Tous droits réservés. Fait avec le
+          <i id="heart" class="fa-solid fa-shield-heart"></i> par l'ESGI.
+        </p>
+      </div>
+    </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const teamMembers = document.querySelectorAll(".team-member");
+      const modals = document.querySelectorAll(".modal");
+      const closeButtons = document.querySelectorAll(".close");
+
+      teamMembers.forEach((member) => {
+        member.addEventListener("click", () => {
+          const modalId = `${member.getAttribute("data-member")}Modal`;
+          const modal = document.getElementById(modalId);
+          openModalWithAnimation(modal);
+        });
+      });
+
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          closeModalWithAnimation(button.closest(".modal"));
+        });
+      });
+
+      window.addEventListener("click", (event) => {
+        modals.forEach((modal) => {
+          if (event.target == modal) {
+            closeModalWithAnimation(modal);
+          }
+        });
+      });
+
+      function openModalWithAnimation(modal) {
+        modal.style.display = "block";
+        setTimeout(() => {
+          modal.classList.add("show");
+        }, 10); // Petit délai pour assurer que le display: block est appliqué
+      }
+
+      function closeModalWithAnimation(modal) {
+        modal.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 300); // Correspond à la durée de la transition CSS
+      }
+    });
+  </script>
 </html>

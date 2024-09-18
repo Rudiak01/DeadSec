@@ -2,12 +2,20 @@
     font-family: Hacked;
     src: url(https://hackedfont.com/HACKED.ttf);
 }
+
+@font-face {
+  font-family: 'Gliker';
+  src: url('/assets/fonts/Gliker-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: Hacked;
+  font-family: 'Gliker', sans-serif;
 }
 
 header {
@@ -22,8 +30,10 @@ header {
   position: fixed;
   max-block-size: 80px;
 }
+
 .navbar {
   display: flex;
+  font-family: Hacked;
 }
 
 nav a {
@@ -32,22 +42,506 @@ nav a {
   font-size: 16px;
   margin: auto;
   padding: 30px;
+  transition: transform 0.3s ease-in-out;
 }
 
-main {
-  padding-top: 70px; /* Ajout de la hauteur de la barre de navigation */
+nav a:hover {
+  transform: scale(0.96);
 }
+
 nav img {
   height: 110px;
   margin-top: 1vh;
   transition: transform 0.3s ease-in-out;
 }
+
 nav img:hover {
   transform: scale(0.96);
 }
-nav a {
-  transition: transform 0.3s ease-in-out;
+
+main {
+  padding-top: 70px; 
 }
-nav a:hover {
-  transform: scale(0.96);
+
+#accueil {
+  background-image: url("https://ekladata.com/9fk1AMm_eSSFC2Py-cSHot9rPmU.jpg");
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 4px 10px #242424;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#accueil h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#accueil p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background-color: #151515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button a {
+  color: white;
+  text-decoration: none;
+}
+.cta-button a:hover {
+  color: #000;
+}
+
+.cta-button:hover {
+  background-color: #FFF;
+  color: #151515;
+  transform: scale(1.05);
+}
+
+#contact{
+  margin: 0;
+  height: 100%;
+  background-image: url(https://wallpapercave.com/wp/wp4020147.png);
+}
+
+
+#margin{
+  margin-top: 350px;
+}
+
+
+
+
+
+
+
+/*code ia de con */
+#boutique .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel {
+  width: 60%;
+}
+
+.product-info {
+  width: 35%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  color: #000;
+}
+
+.product-info h2 {
+  margin-bottom: 15px;
+}
+
+.product-info p {
+  margin-bottom: 10px;
+}
+
+
+
+
+#product-description {
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+#boutique {
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  flex-wrap: nowrap;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  transition: .5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.carousel-controls {
+  position: absolute;
+  z-index: 5;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-controls button {
+  padding: 15px;
+  background-color: #8a0303;
+  border-radius: 20px;
+  border: none;
+}
+
+.carousel-dots {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  right: 50%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-dots .dot {
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.carousel-dots .active {
+  border: 10px solid #8a0303 !important;
+}
+.carousel-dots .inactive {
+  border: 10px solid #000000;
+}
+
+i {
+  color:white;
+}
+i#heart {
+  color: red;
+}
+
+
+
+
+/* Styles pour les modales avec animation */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#equipe {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#equipe h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 250px; /* Largeur fixe pour tous les membres */
+}
+
+.team-member:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour le clic sur les membres de l'équipe */
+.team-member:active {
+    transform: scale(0.98);
+}
+
+.team-member-image {
+    width: 100%;
+    height: 250px; /* Hauteur fixe pour créer un carré */
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ceci assure que l'image remplit le conteneur tout en conservant son ratio */
+    object-position: center; /* Centre l'image dans le conteneur */
+}
+
+.team-member h3 {
+    margin: 15px 0 5px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    margin: 0 0 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Styles pour les modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.modal-text {
+    flex: 1;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-content img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-member {
+        width: 80%;
+        max-width: 250px;
+    }
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Gliker', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e74c3c;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+.footer-bottom {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin: 10px 20px;
+    }
 }

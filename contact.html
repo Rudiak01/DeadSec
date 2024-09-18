@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="icon" type="image/png" href="assets/img/favico.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <script src="js/contact.js"></script>
+  </head>
+  <body id="contact">
+    <header>
+      <nav class="navbar">
+        <a href="boutique.html">Boutique</a>
+        <div id="logo">
+          <a href="index.html"
+            ><img src="assets/img/skullgpng.png" alt="Logo"
+          /></a>
+        </div>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="margin">
+
+    <div id="paywall"></div>
+
+    <script src="https://assets.poool.fr/access.min.js"></script>
+    <script>
+      Access
+        .init(href="boutique.html")
+        .createPaywall({
+          target: '#paywall',
+          content: '.content',
+          mode: 'excerpt',
+          percent: 80,
+          pageType: 'premium',
+        });
+    </script>
+    </main>
+  </body>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>À propos</h3>
+        <p>
+          Découvrez notre univers unique de style et d'imagination. Nous
+          sommes passionnés par la création de designs innovants et
+          captivants.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Liens rapides</h3>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="pc.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>
+            Email : <a href="mailto:info@deadsec.com">info@deadsec.com</a>
+          </li>
+          <li>Téléphone : +33 6 62 12 53 64</li>
+          <li>Femme uniquement</li>
+          <li>Adresse: 16 Rue de la Justice, 51100 Reims</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+          <a
+            href="https://instagram.com/fablbn_"
+            aria-label="Instagram Le plus bo"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://instagram.com/teanokayak"
+            aria-label="Instagram"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://instagram.com/rom1_0_cub3"
+            aria-label="Instagram"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://instagram.com/louann.grdn"
+            aria-label="Instagram"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        &copy; 2024 DeadSec. Tous droits réservés. Fait avec le
+        <i id="heart" class="fa-solid fa-shield-heart"></i> par l'ESGI.
+      </p>
+    </div>
+  </footer>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const teamMembers = document.querySelectorAll(".team-member");
+    const modals = document.querySelectorAll(".modal");
+    const closeButtons = document.querySelectorAll(".close");
+
+    teamMembers.forEach((member) => {
+      member.addEventListener("click", () => {
+        const modalId = `${member.getAttribute("data-member")}Modal`;
+        const modal = document.getElementById(modalId);
+        openModalWithAnimation(modal);
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        closeModalWithAnimation(button.closest(".modal"));
+      });
+    });
+
+    window.addEventListener("click", (event) => {
+      modals.forEach((modal) => {
+        if (event.target == modal) {
+          closeModalWithAnimation(modal);
+        }
+      });
+    });
+
+    function openModalWithAnimation(modal) {
+      modal.style.display = "block";
+      setTimeout(() => {
+        modal.classList.add("show");
+      }, 10); // Petit délai pour assurer que le display: block est appliqué
+    }
+
+    function closeModalWithAnimation(modal) {
+      modal.classList.remove("show");
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 300); // Correspond à la durée de la transition CSS
+    }
+  });
+</script>
+</html>
